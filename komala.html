@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile - A Komala</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8f2; /* Soft off-white background */
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #003366; /* Dark blue color */
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        header:hover {
+            background-color: #002244; /* Darker blue on hover */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.5rem;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* Photo Section Styling */
+        #photo-section {
+            display: flex;
+            justify-content: center;
+            padding: 50px 0;
+            background-color: #e0f2f1; /* Light teal background for photo section */
+        }
+
+        .photo-container {
+            text-align: center;
+            background-color: #ffffff; /* White background for the photo container */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 350px; /* Maximum width of the photo section */
+            width: 100%;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px; /* Center the photo and add margin at the bottom */
+            transition: 0.3s ease;
+        }
+
+        .profile-photo:hover {
+            transform: scale(2.1); /* Zoom effect on hover */
+            border: 5px solid #ff7043; /* Coral border on hover */
+        }
+
+        #photo-section p {
+            font-size: 1.2rem;
+            color: #00796b; /* Dark teal text color */
+            margin: 5px 0;
+        }
+
+        #photo-section p strong {
+            font-size: 1.5rem;
+            color: #333; /* Dark color for the name */
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section Styling */
+        .section-title {
+            font-size: 2rem;
+            color: #00796b; /* Dark teal color for titles */
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Card Layout for Sections */
+        .card {
+            background: linear-gradient(135deg, #ffccbc, #ff7043); /* Soft peach and coral gradient */
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #ff7043, #ffccbc); /* Color change on hover */
+        }
+
+        /* Links Styling */
+        a {
+            color: #00796b; /* Dark teal for links */
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #ff7043; /* Coral on hover */
+        }
+
+        /* Skills List */
+        .skills-list {
+            list-style: none;
+            padding: 0;
+        }
+        .skills-list li {
+            background-color: #ff7043; /* Coral for skill items */
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+        .skills-list li:hover {
+            background-color: #00796b; /* Dark teal on hover */
+            color: white; /* Keep text white */
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            background-color: #00796b;
+            color: white;
+            padding: 15px;
+            margin: 0 10px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: 0.3s ease;
+        }
+        .social-icons a:hover {
+            background-color: #ff7043;
+            transform: scale(1.2); /* Enlarges icon on hover */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4db6ac; /* Soft teal footer */
+            color: white;
+            margin-top: 30px;
+            border-top: 5px solid #ff7043;
+        }
+        footer:hover {
+            background-color: #009688; /* Hover effect on footer */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Welcome To The Profile Of</h1>
+        <h1> A Komala</h1>
+    </header>
+
+    <!-- Photo Section -->
+    <section id="photo-section">
+        <div class="photo-container">
+            <!-- Using img tag for profile photo -->
+            <img src="komala.jpg" alt="A Komala" class="profile-photo">
+            <p><strong>A Komala</strong></p>
+            <p>2nd Year BCA - Aspiring Developer</p>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- About Me Section -->
+        <section id="about">
+            <div class="card">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-content">
+                    I am A Komala, a 2nd-year BCA student with a passion for web development, programming, and social impact initiatives. I aim to develop skills that can contribute to both technology and social causes. I am currently exploring various programming languages and their applications in real-world projects.
+                </p>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <div class="card">
+                <h2 class="section-title">Education</h2>
+                <p class="section-content">
+                    Currently pursuing a Bachelor's degree in Computer Applications (BCA) with a focus on software development and programming. I am continuously learning and experimenting with new technologies to enhance my skillset.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="card">
+                <h2 class="section-title">Skills</h2>
+                <ul class="skills-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements">
+            <div class="card">
+                <h2 class="section-title">Achievements</h2>
+                <p class="section-content">
+                    - Completed several web development projects using HTML, CSS, and JavaScript.<br>
+                    - Actively involved in coding competitions and hackathons.<br>
+                    - Contributed to social entrepreneurship projects at Hamari Pahchan, helping empower communities.
+                </p>
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies">
+            <div class="card">
+                <h2 class="section-title">Hobbies & Interests</h2>
+                <p class="section-content">
+                    Outside of my studies, I enjoy volunteering for social causes, exploring new programming languages, and designing creative projects. I also love reading books on technology, entrepreneurship, and personal development.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="card">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-content">
+                    Email: <strong>komalareddy975@gmail.com</strong><br>
+                    Instagram: <strong><a href="https://instagram.com/komala_reddy__" target="_blank">komala_reddy__</a></strong><br>
+                    LinkedIn: <strong><a href="https://www.linkedin.com/in/komala-reddy-975" target="_blank">komala-reddy-975</a></strong><br>
+                    GitHub: <strong><a href="https://github.com/komala975" target="_blank">komala975</a></strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <a href="mailto:komalareddy975@gmail.com">&#9993;</a>
+            <a href="https://instagram.com/komala_reddy__" target="_blank">&#128077;</a>
+            <a href="https://www.linkedin.com/in/komala-reddy-975" target="_blank">&#xf0e1;</a>
+            <a href="https://github.com/komala975" target="_blank">&#xf09b;</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 A Komala. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
