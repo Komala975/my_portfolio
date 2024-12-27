@@ -82,38 +82,44 @@
             max-width: 900px;
             margin: 30px auto;
             padding: 20px;
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         /* Section Styling */
-        .section-title {
-            font-size: 2rem;
-            color: #00796b; /* Dark teal color for titles */
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .section-content {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #555;
-        }
-
-        /* Card Layout for Sections */
         .card {
-            background: linear-gradient(135deg, #ffccbc, #ff7043); /* Soft peach and coral gradient */
             padding: 20px;
             border-radius: 15px;
             margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: 0.3s ease;
         }
+
+        #about .card {
+            background-color: #fce4ec; /* Light pink */
+        }
+
+        #education .card {
+            background-color: #e3f2fd; /* Light blue */
+        }
+
+        #skills .card {
+            background-color: #e8f5e9; /* Light green */
+        }
+
+        #achievements .card {
+            background-color: #fff3e0; /* Light orange */
+        }
+
+        #hobbies .card {
+            background-color: #ede7f6; /* Light purple */
+        }
+
+        #contact .card {
+            background-color: #f1f8e9; /* Light lime */
+        }
+
         .card:hover {
             transform: scale(1.05);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            background: linear-gradient(135deg, #ff7043, #ffccbc); /* Color change on hover */
         }
 
         /* Links Styling */
